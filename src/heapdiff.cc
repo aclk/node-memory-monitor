@@ -91,7 +91,7 @@ NAN_METHOD(heapdiff::HeapDiff::New)
 
 static string handleToStr(const Local<Value> & str)
 {
-	String::Utf8Value utfString(v8::Isolate::GetCurrent(), str->ToString());
+	String::Utf8Value utfString(v8::Isolate::GetCurrent(), str);
 	return *utfString;
 }
 
